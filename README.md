@@ -7,6 +7,7 @@ Overview
 Debugger's Nightmare is an AI-assisted coding playground where your code is intentionally sabotaged and you are expected to survive. Bugs appear out of nowhere, time runs out faster than expected, and an AI quietly judges your debugging skills while offering help when things go wrong.
 
 This project turns debugging into a challenge instead of a chore.
+**TRY IT : ** https://debugger-s-nightmare-ai-assisted-45mygqqa6-thiyaanes-projects.vercel.app/
 
 What Is This?
 
@@ -96,3 +97,4 @@ More creative bug injections
 Performance tracking
 Additional languages
 Competitive challenge mode
+
