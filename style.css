@@ -1,0 +1,203 @@
+body {
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:#0b0c10;
+  color:#e6eef6;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#111827;
+  padding:10px 16px;
+  color:#fff;
+}
+
+.timer { font-family:'Share Tech Mono', monospace; font-size:14px; }
+
+.container {
+  flex:1;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:10px;
+  padding:12px;
+}
+
+/* AI panel styles */
+.ai-button {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#0b1220;
+  border:1px solid #374151;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  z-index:60;
+}
+
+.ai-panel {
+  position:fixed;
+  right:18px;
+  top:64px;
+  width:320px;
+  height:70vh;
+  background:#0b1220;
+  border:1px solid #374151;
+  border-radius:10px;
+  padding:12px;
+  color:#e6eef6;
+  display:none;
+  z-index:55;
+}
+
+.ai-panel.open { display:block; }
+.ai-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.ai-body { font-size:14px; }
+.ai-actions { display:flex; gap:6px; margin:8px 0; }
+.ai-content { background:#091021; padding:8px; border-radius:6px; height:60%; overflow:auto; }
+
+.editorPane, .outputPane {
+  background:#1f2937;
+  border-radius:8px;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+}
+
+.editorHeader { display:flex; justify-content:flex-start; align-items:center; gap:12px; margin-bottom:4px; }
+
+.controls { display:flex; gap:8px; margin-left:auto; }
+
+button {
+  background:#0b1220;
+  color:#fff;
+  border:1px solid #374151;
+  padding:6px 12px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+button.primary { background:#ef4444; border:none; }
+
+select { background:#111827; color:#fff; border-radius:6px; padding:6px 8px; }
+
+#editor { flex:1; border-radius:6px; height:420px; margin-top:4px; }
+
+.consoleLabel { font-weight:600; margin-bottom:4px; }
+
+#consoleLog {
+  background:#000;
+  color:#9fb1d0;
+  font-family:'Share Tech Mono', monospace;
+  padding:8px;
+  border-radius:6px;
+  height:100px;
+  overflow:auto;
+  white-space:pre-wrap;
+}
+
+#outputBox {
+  flex:1;
+  background:#0b0c10;
+  margin-top:8px;
+  border-radius:6px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  text-align:center;
+  padding:10px;
+}
+
+/* Gemini gem button centered inside output pane */
+.ai-gem {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background: linear-gradient(135deg,#5eead4,#60a5fa);
+  border:none;
+  color:#061014;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.outputPane { position:relative; }
+
+.sarcastic { color:#ff4d6d; margin-bottom:6px; font-size:18px; text-align:center; }
+
+.correctMsg { color:#ffd700; margin-bottom:6px; font-weight:bold; text-align:center; }
+
+.correctOutput { color:#00ff91; font-family:'Share Tech Mono', monospace; text-align:center; width:100%; white-space:pre-wrap; }
+/* AI chat */
+.ai-chat {
+  flex: 1;
+  background: #050b18;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.ai-msg {
+  max-width: 85%;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  line-height: 1.4;
+}
+
+.ai-msg.user {
+  background: #2563eb;
+  color: #fff;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.ai-msg.ai {
+  background: #111827;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+}
+
+/* input bar */
+.ai-input-bar {
+  display: flex;
+  gap: 6px;
+}
+
+.ai-input-bar input {
+  flex: 1;
+  background: #020617;
+  border: 1px solid #374151;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.ai-input-bar button {
+  background: linear-gradient(135deg,#5eead4,#60a5fa);
+  border: none;
+  color: #020617;
+  font-size: 16px;
+  padding: 0 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}

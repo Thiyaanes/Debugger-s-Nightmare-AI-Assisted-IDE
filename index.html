@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Debugger's Nightmare - AI Assisted Battlefield ⚔️</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div>🐛 Debugger's Nightmare - AI Assisted Battlefield ⚔️</div>
+  <div class="timer">⏳ <span id="countdown">15</span>s</div>
+</header>
+
+<div class="container">
+  <div class="editorPane">
+    <div class="editorHeader">
+      <select id="langSelect">
+        <option value="javascript" ><img src="js.png" width="20">JavaScript</option>
+        <option value="python" selected>Python</option>
+        <option value="cpp">C++</option>
+      </select>
+
+      <select id="modeSelect">
+        <option value="nightmare" selected>🐛 Nightmare</option>
+        <option value="learn">📖 Learn</option>
+      </select>
+
+      <select id="difficultySelect">
+        <option value="beginner">👼 Beginner</option>
+        <option value="intermediate">🤺 Intermediate</option>
+        <option value="nightmare">🦇 Nightmare</option>
+      </select>
+
+      <div class="controls">
+        <button id="runBtn" class="primary">Run</button>
+        <button id="giveUpBtn">Give Up</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </div>
+    <div id="editor"></div>
+    <div class="consoleLabel">Console</div>
+    <div id="consoleLog">Ready for chaos...</div>
+  </div>
+
+  <div class="outputPane">
+    <strong>Output</strong>
+    <div id="outputBox">Nothing yet. Try running or giving up 😈</div>
+
+    <!-- Gemini gem button centered at bottom of output pane -->
+    <button id="aiGem" class="ai-gem" aria-label="Open AI panel">✦</button>
+  </div>
+</div>
+
+<!-- AI panel (hidden by default) -->
+<div id="aiPanel" class="ai-panel" aria-hidden="true">
+  <div class="ai-header">
+    <strong>AI Assistant</strong>
+    <button id="aiClose" class="ai-close">✕</button>
+  </div>
+  <div class="ai-body">
+    
+    <div id="aiChat" class="ai-chat"></div>
+
+<div class="ai-input-bar">
+  <input 
+    type="text" 
+    id="aiUserInput" 
+    placeholder="Ask AI to explain / fix / rewrite code..."
+    autocomplete="off"
+  />
+  <button id="aiSendBtn">➤</button>
+</div>
+
+    <div id="aiContent" class="ai-content">No explanation yet.</div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/ace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/theme-monokai.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/mode-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/mode-python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/mode-c_cpp.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
